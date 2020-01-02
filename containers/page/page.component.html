@@ -1,3 +1,5 @@
 <bp-header title="Hi"></bp-header>
 
-<p>Lorem ipsum</p>
+<p>You have {{ $ctrl.likes }} likes.</p>
+
+<bp-like-btn hit-like="$ctrl.incrementLikes()"></bp-like-btn>

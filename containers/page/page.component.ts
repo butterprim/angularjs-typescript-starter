@@ -1,6 +1,12 @@
 export class PageCtrl {
+  public likes = 0;
+
   static $inject = [];
   constructor(){
+  }
+
+  incrementLikes() {
+    this.likes++;
   }
 }
 
