@@ -1,9 +1,10 @@
 import * as angular from 'angular';
-import 'angular-route';
 
 import { PageComponent } from './page/page.component';
 
-const module = angular.module('app.containers', []);
+import '../components/components.module';
+
+const module = angular.module('app.containers', ['app.components']);
 
 module.component('bpPage', PageComponent);
 
