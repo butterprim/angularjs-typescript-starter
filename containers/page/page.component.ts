@@ -8,6 +8,13 @@ export class PageCtrl {
   incrementLikes() {
     this.likes++;
   }
+
+  get likesDisplay() {
+    if (this.likes == 1) {
+      `You have 1 like`;
+    }
+    return `You have ${this.likes} likes`;
+  }
 }
 
 export const PageComponent = {
