@@ -11,3 +11,7 @@ export const HeaderComponent = {
   template: require('./header.component.html'),
   controller: HeaderCtrl
 };
+
+export default {
+  HeaderComponent
+};

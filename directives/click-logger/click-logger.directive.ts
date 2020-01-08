@@ -9,3 +9,7 @@ export const ClickLoggerDirective = {
     });
   }
 };
+
+export default {
+  ClickLoggerDirective
+};

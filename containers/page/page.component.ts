@@ -22,3 +22,7 @@ export const PageComponent = {
   template: require('./page.component.html'),
   controller: PageCtrl
 };
+
+export default {
+  PageComponent
+};

@@ -11,3 +11,7 @@ export const LikeButtonComponent = {
   template: require('./like-button.component.html'),
   controller: LikeButtonCtrl
 };
+
+export default {
+  LikeButtonComponent
+};
