@@ -2,5 +2,4 @@
 
 <p>You have {{ $ctrl.likes }} {{ $ctrl.likes == 1 ? 'like' : 'likes' }}.</p>
 
-<bp-like-btn hit-like="$ctrl.incrementLikes()"></bp-like-btn>
-<button bp-click-logger message="$ctrl.likesDisplay">Log</button>
+<bp-like-btn hit-like="$ctrl.incrementLikes()" bp-click-logger="{{ $ctrl.likesDisplay }}"></bp-like-btn>
