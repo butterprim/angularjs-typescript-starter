@@ -1,5 +1,5 @@
 <bp-header title="Hi"></bp-header>
 
-<p>You have {{ $ctrl.likes }} likes.</p>
+<p>You have {{ $ctrl.likes }} {{ $ctrl.likes == 1 ? 'like' : 'likes'}}.</p>
 
 <bp-like-btn hit-like="$ctrl.incrementLikes()"></bp-like-btn>
