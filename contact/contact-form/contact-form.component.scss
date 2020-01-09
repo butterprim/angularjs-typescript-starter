@@ -23,6 +23,7 @@ $error-color: #e74c3c;
     border: 1px solid gray;
     padding: 0.5rem;
     border-radius: 3px;
+    font-family: 'Courier New', Courier, monospace;
 
     &.ng-touched.ng-invalid {
       border-color: $error-color;
