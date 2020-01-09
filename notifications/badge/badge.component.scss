@@ -1,0 +1,14 @@
+.badge {
+  background-color: #FBEECA;
+  color: #241C15;
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 3px;
+
+  &.error {
+    background-color: #FBCFBD;
+  }
+  &.large {
+    font-size: 1.75rem;
+  }
+}
