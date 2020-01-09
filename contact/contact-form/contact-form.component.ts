@@ -1,5 +1,7 @@
 import * as angular from 'angular';
 
+import './contact-form.component.scss';
+
 const module = angular.module('app.contact.form', [
 
 ]);

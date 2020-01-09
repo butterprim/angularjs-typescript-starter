@@ -25,7 +25,10 @@
     </div>
     <div>
       <label>Company Size</label>
-      <input type="number" ng-model="company.number" name="companyNumber" required/>
+      <input type="number" ng-model="company.number" name="companyNumber" min="1" required/>
+      <div class="error" ng-show="companyForm.companyNumber.$touched && companyForm.companyNumber.$error.min">The minimum value is 1.</div>
     </div>
   </form>
+
+  <h1>Form with custom control</h1>
 </div>
