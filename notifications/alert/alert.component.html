@@ -1,0 +1,10 @@
+<div
+  class="alert"
+  ng-class="{ 'error': $ctrl.alertType == 'error' }"
+>
+  {{ $ctrl.message }}
+  <div class="actions">
+    <button ng-click="$ctrl.onOk()">Ok</button>
+    <button ng-click="$ctrl.onCancel()">Cancel</button>
+  </div>
+</div>

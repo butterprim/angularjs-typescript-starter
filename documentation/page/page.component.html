@@ -9,3 +9,14 @@
 <kb-badge size="large" message="$ctrl.message"></kb-badge>
 
 <p>You can also make the text larger using the size binding.</p>
+
+<kb-alert
+  message="$ctrl.message"
+  on-ok="$ctrl.markAsRead('first')"
+  on-cancel="$ctrl.markAsCancelled('first')"
+  kb-hide-on-click
+></kb-alert>
+
+<div>
+  <div ng-repeat="read in $ctrl.readHistory">{{ read }}</div>
+</div>

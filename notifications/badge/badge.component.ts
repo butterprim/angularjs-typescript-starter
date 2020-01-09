@@ -5,11 +5,16 @@ import './badge.component.scss';
 const module = angular.module('app.notifications.badge', []);
 
 export class BadgeCtrl {
+  badgeType: string;
+
   static $inject = [];
   constructor(){
   }
 
-
+  $onInit() {
+    // you can do initializations here
+    // this.badgeType = 'error';
+  }
 }
 
 module.component('kbBadge', {
