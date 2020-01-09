@@ -1,3 +1,5 @@
+<h1>Components</h1>
+
 <kb-badge message="$ctrl.message"></kb-badge>
 
 <p>This is the default badge.</p>
@@ -10,6 +12,8 @@
 
 <p>You can also make the text larger using the size binding.</p>
 
+<h1>Directives</h1>
+
 <kb-alert
   message="$ctrl.message"
   on-ok="$ctrl.markAsRead('first')"
@@ -17,6 +21,12 @@
   kb-hide-on-click
 ></kb-alert>
 
-<div>
+<div ng-if="$ctrl.readHistory.length > 0">
+  <h3>Read</h3>
   <div ng-repeat="read in $ctrl.readHistory">{{ read }}</div>
+</div>
+
+<div ng-if="$ctrl.cancelHistory.length > 0">
+  <h3>Cancel</h3>
+  <div ng-repeat="cancelled in $ctrl.cancelHistory">{{ cancelled }}</div>
 </div>
