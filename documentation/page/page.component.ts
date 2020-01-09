@@ -2,7 +2,7 @@ import * as angular from 'angular';
 
 import '../../notifications/badge/badge.component';
 import '../../notifications/alert/alert.component';
-import '../../directives/hide.directive';
+import '../../directives/directive';
 
 const module = angular.module('app.documentation.page', [
   'app.notifications.badge',
@@ -12,19 +12,14 @@ const module = angular.module('app.documentation.page', [
 
 export class PageCtrl {
   message = 'Hello everyone!';
-  readHistory: string[] = []
-  cancelHistory: string[] = [];
+  activity: string[] = [];
 
   static $inject = [];
   constructor(){
   }
 
-  markAsRead(alertCode: string) {
-    this.readHistory.push(alertCode);
-  }
-
-  markAsCancelled(alertCode: string) {
-    this.cancelHistory.push(alertCode);
+  mark(data: any) {
+    this.activity.push(data.code);
   }
 }
 

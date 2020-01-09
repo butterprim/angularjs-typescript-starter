@@ -16,20 +16,15 @@
 
 <kb-alert
   message="$ctrl.message"
-  on-ok="$ctrl.markAsRead('first')"
-  on-cancel="$ctrl.markAsCancelled('first')"
+  on-ok="$ctrl.mark({code: code})"
+  on-cancel="$ctrl.mark({code: code})"
 ></kb-alert>
 
 <p>Hide this</p>
 
 <kb-badge kb-hide-on-click message="$ctrl.message"></kb-badge>
 
-<div ng-if="$ctrl.readHistory.length > 0">
-  <h3>Read</h3>
-  <div ng-repeat="read in $ctrl.readHistory track by $index">{{ read }}</div>
-</div>
-
-<div ng-if="$ctrl.cancelHistory.length > 0">
-  <h3>Cancel</h3>
-  <div ng-repeat="cancelled in $ctrl.cancelHistory track by $index">{{ cancelled }}</div>
+<div ng-if="$ctrl.activity.length > 0">
+  <h3>activity</h3>
+  <div ng-repeat="code in $ctrl.activity track by $index">{{ code }}</div>
 </div>
