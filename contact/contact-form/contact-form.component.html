@@ -1,0 +1,31 @@
+<div class="contact-form">
+  <h1>Simple Form</h1>
+
+  <form novalidate>
+    <div>
+      <label>Name</label>
+      <input type="text" ng-model="user.name"/>
+    </div>
+    <div>
+      <label>Email</label>
+      <input type="email" ng-model="user.email"/>
+    </div>
+  </form>
+
+  <h2>{{ user.name }}</h2>
+  <p>{{ user.email }}</p>
+
+  <h1>Form with control</h1>
+
+  <form name="companyForm" novalidate>
+    <div>
+      <label>Company Name</label>
+      <input type="text" ng-model="company.name" name="companyName" required/>
+      <div class="error" ng-show="companyForm.companyName.$touched && companyForm.companyName.$error.required">This is required</div>
+    </div>
+    <div>
+      <label>Company Size</label>
+      <input type="number" ng-model="company.number" name="companyNumber" required/>
+    </div>
+  </form>
+</div>
