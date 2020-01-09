@@ -1,14 +1,14 @@
 <h1>Components</h1>
 
-<kb-badge message="$ctrl.message"></kb-badge>
+<kb-badge>{{ $ctrl.message }}</kb-badge>
 
 <p>This is the default badge.</p>
 
-<kb-badge badge-type="error" message="$ctrl.message"></kb-badge>
+<kb-badge badge-type="error">{{ $ctrl.message }}</kb-badge>
 
 <p>This is the error type badge.</p>
 
-<kb-badge size="large" message="$ctrl.message"></kb-badge>
+<kb-badge size="large">{{ $ctrl.message }}</kb-badge>
 
 <p>You can also make the text larger using the size binding.</p>
 
@@ -22,7 +22,7 @@
 
 <p>Hide this</p>
 
-<kb-badge kb-hide-on-click message="$ctrl.message"></kb-badge>
+<kb-badge kb-hide-on-click>Hide me!</kb-badge>
 
 <div ng-if="$ctrl.activity.length > 0">
   <h3>activity</h3>

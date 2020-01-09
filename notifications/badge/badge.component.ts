@@ -21,8 +21,8 @@ module.component('kbBadge', {
   bindings: {
     badgeType: '@?',
     size: '@?',
-    message: '<'
   },
+  transclude: true,
   template: require('./badge.component.html'),
   controller: BadgeCtrl,
   controllerAs: '$ctrl'

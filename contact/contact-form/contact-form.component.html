@@ -2,11 +2,11 @@
   <h1>Simple Form</h1>
 
   <form novalidate>
-    <div>
+    <div class="row">
       <label>Name</label>
       <input type="text" ng-model="user.name"/>
     </div>
-    <div>
+    <div class="row">
       <label>Email</label>
       <input type="email" ng-model="user.email"/>
     </div>
@@ -18,16 +18,23 @@
   <h1>Form with control</h1>
 
   <form name="companyForm" novalidate>
-    <div>
+    <div class="row">
       <label>Company Name</label>
       <input type="text" ng-model="company.name" name="companyName" required/>
-      <div class="error" ng-show="companyForm.companyName.$touched && companyForm.companyName.$error.required">This is required</div>
+      <div class="error" ng-show="(companyForm.$submitted || companyForm.companyName.$touched) && companyForm.companyName.$error.required">This is required</div>
     </div>
-    <div>
+    <div class="row">
       <label>Company Size</label>
       <input type="number" ng-model="company.number" name="companyNumber" min="1" required/>
-      <div class="error" ng-show="companyForm.companyNumber.$touched && companyForm.companyNumber.$error.min">The minimum value is 1.</div>
+      <div class="error" ng-show="(companyForm.$submitted || companyForm.companyNumber.$touched) && companyForm.companyNumber.$error.min">The minimum value is 1.</div>
+      <div class="error" ng-show="(companyForm.$submitted || companyForm.companyNumber.$touched) && companyForm.companyNumber.$error.required">This is required</div>
     </div>
+
+    <kb-badge badge-type="error" ng-show="companyForm.$submitted && !companyForm.$valid">Please resolve all issues.</kb-badge>
+    <kb-badge ng-show="$ctrl.isSubmitted">Submitted!</kb-badge>
+    
+    <button type="submit" class="primary" ng-click="$ctrl.submitCompanyForm()">Submit</button>
+    <button type="button" ng-click="$ctrl.resetCompanyForm()">Reset</button>
   </form>
 
   <h1>Form with custom control</h1>

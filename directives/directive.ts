@@ -6,7 +6,11 @@ module.directive('kbHideOnClick', () => ({
     restrict: 'A',
     link: function($scope, element, attrs) {
       element.on('click', function() {
-        element.remove();
+        if (attrs.useClass == "true" && !element.hasClass("hidden")) {
+          element.addClass("hidden");
+        } else {
+          element.remove();
+        }
       });
     },
   })

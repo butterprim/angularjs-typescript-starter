@@ -2,5 +2,5 @@
   class="badge"
   ng-class="{ 'error': $ctrl.badgeType == 'error', 'large': $ctrl.size == 'lg' }"
 >
-  {{ $ctrl.message }}
+  <div ng-transclude></div>
 </div>
