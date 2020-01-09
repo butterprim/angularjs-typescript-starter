@@ -9,8 +9,8 @@ export class AlertCtrl {
   constructor(){
   }
 
-  $onInit() {
-    // you can do initializations here
+  $onDestroy() {
+    console.log('Hidden!');
   }
 }
 
