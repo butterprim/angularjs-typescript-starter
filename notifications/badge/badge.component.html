@@ -3,4 +3,7 @@
   ng-class="{ 'error': $ctrl.badgeType == 'error', 'large': $ctrl.size == 'lg' }"
 >
   <div ng-transclude></div>
+  <div ng-if="$ctrl.message">
+    <h1>{{ $ctrl.message }}</h1>
+  </div>
 </div>

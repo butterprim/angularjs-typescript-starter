@@ -12,6 +12,9 @@ module.directive('kbHideOnClick', () => ({
           element.remove();
         }
       });
+      element.on('destroy', function() {
+        console.log('cleanup');
+      });
     },
   })
 );

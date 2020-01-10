@@ -13,16 +13,25 @@ const module = angular.module('app.contact.form', [
 
 export class ContactFormCtrl {
   isSubmitted = false;
+  companyName: string;
+
+  company: {name: string, size: number} = {name: null, size: null};
 
   static $inject = ['$scope', 'ContactService'];
   constructor(private $scope, private ContactService){
   }
 
   $onInit() {
-    this.$scope.user = this.ContactService.getUser();
+    this.$scope.user = angular.copy(this.ContactService.getUser());
+  }
+
+  submitUserForm() {
+    this.ContactService.setUserName(this.$scope.user.name);
   }
 
   submitCompanyForm() {
+    console.log(this.company);
+    console.log(this.$scope.companyForm.companyName);
     if (this.$scope.companyForm.$invalid) {
       Object.keys(this.$scope.companyForm.$error).forEach(errorKey => {
         this.$scope.companyForm.$error[errorKey].forEach(input => {
@@ -37,7 +46,8 @@ export class ContactFormCtrl {
   resetCompanyForm() {
     this.$scope.companyForm.$setPristine();
     this.$scope.companyForm.$setUntouched();
-    this.$scope.company = {};
+    this.company = {name: null, size: null};
+    this.isSubmitted = false;
   }
 }
 

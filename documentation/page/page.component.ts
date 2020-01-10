@@ -21,7 +21,8 @@ export class PageCtrl {
   }
 
   mark(data: any) {
-    this.activity.push(data.code);
+    // this.activity.push(data.code);
+    console.log(data);
   }
 
   get userName() {

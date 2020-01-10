@@ -13,14 +13,17 @@ export class BadgeCtrl {
 
   $onInit() {
     // you can do initializations here
-    // this.badgeType = 'error';
+    if (!this.badgeType) {
+      this.badgeType = 'error';
+    }
   }
 }
 
 module.component('kbBadge', {
   bindings: {
     badgeType: '@?',
-    size: '@?',
+    size: '<?',
+    message: '<?',
   },
   transclude: true,
   template: require('./badge.component.html'),

@@ -10,8 +10,8 @@ export class ContactService {
     return this.user;
   }
 
-  setUser(user) {
-    this.user = user;
+  setUserName(name: string) {
+    this.user.name = name;
   }
 }
 
